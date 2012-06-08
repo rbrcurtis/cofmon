@@ -1,0 +1,1 @@
+A coffeescript shell for mongodb so that you can write coffeescript instead of javascript in the mongo shell.

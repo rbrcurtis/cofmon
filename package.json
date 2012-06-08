@@ -1,0 +1,19 @@
+{
+	"author": "Ryan Curtis <rbrcurtis@gmail.com> (rbrcurtis.com)",
+	"name": "cofmon",
+	"description": "coffee-script shell for mongodb",
+	"version": "0.0.0",
+	"repository": {
+		"url": ""
+	},
+	"main": "cofmon",
+	"engines": {
+		"node": "~0.6.11"
+	},
+	"dependencies": {
+		"coffee-script":	"1.2.0",
+		"colors":				 "latest",
+		"eyes":					 "latest",
+		"underscore":		 "latest"
+	}
+}
