@@ -2,19 +2,18 @@
   "author": "Ryan Curtis <rbrcurtis@gmail.com> (rbrcurtis.com)",
   "name": "cofmon",
   "description": "coffee-script shell for mongodb",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": {
+    "type":"git",
     "url": "https://github.com/rbrcurtis/cofmon"
   },
-  "main": "cofmon",
+  "preferGlobal": "true",
+  "bin": {"cofmon": "cofmon.coffee"},
   "engines": {
     "node": "~0.6.11"
   },
   "dependencies": {
-    "coffee-script": "1.2.0",
-    "colors": "latest",
-    "eyes": "latest",
-    "underscore": "latest"
+    "coffee-script": ">=1.2.0"
   },
   "devDependencies": {},
   "optionalDependencies": {},
