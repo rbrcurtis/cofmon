@@ -1,13 +1,9 @@
-#!/usr/bin/env /usr/local/bin/coffee
+#!/usr/bin/env node_modules/coffee-script/bin/coffee
 
 url = require 'url'
 readline = require 'readline'
 
 coffee = require 'coffee-script'
-require 'colors'
-
-global._       = require 'underscore'
-global.inspect = require('eyes').inspector(maxLength: 10240)
 
 tid = null
 proc = require 'child_process'
