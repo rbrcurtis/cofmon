@@ -11,7 +11,7 @@ shell = proc.spawn 'mongo', process.argv.slice 2
 rl = readline.createInterface process.stdin, process.stdout
 
 query = ->
-	rl.question '', (data) ->
+	rl.question '>', (data) ->
 		try
 			if data.match /^(show|use)/ then c = data+"\n"
 			else c = coffee.compile data.toString(), {bare:true}
