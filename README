@@ -1,3 +1,3 @@
 A coffeescript shell for mongodb so that you can write coffeescript instead of javascript in the mongo shell.
 
-To use, just 'npm install -g cofmon' and then use the cofmon command as you would the mongo command.
+To use, just 'npm install -g cofmon coffee-script' and then use the cofmon command as you would the mongo command.
