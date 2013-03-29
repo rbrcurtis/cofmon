@@ -1,9 +1,7 @@
-#!/usr/bin/env coffee
-
 url = require 'url'
 readline = require 'readline'
 
-coffee = require 'coffee-script'
+coffee = require __dirname+'/../node_modules/coffee-script'
 
 tid = null
 proc = require 'child_process'
