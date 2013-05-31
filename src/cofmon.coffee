@@ -1,7 +1,7 @@
 url = require 'url'
 readline = require 'readline'
 
-coffee = require 'coffee-script'
+coffee = require __dirname+'/../node_modules/coffee-script'
 
 tid = null
 proc = require 'child_process'
@@ -11,10 +11,8 @@ rl = readline.createInterface process.stdin, process.stdout
 query = ->
 	rl.question '>', (data) ->
 		try
-			data = data.replace /("[0-9a-f]{24}")/g, "ObjectId($1)"
-			if data.match /^(show|use|it)( |\n)/ then c = data+"\n"
+			if data.match /^(show|use)/ then c = data+"\n"
 			else c = coffee.compile data.toString(), {bare:true}
-			console.log c
 			shell.stdin.write c
 		catch e
 			shell.stdin.write data

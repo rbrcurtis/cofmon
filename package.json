@@ -8,14 +8,12 @@
     "url": "https://github.com/rbrcurtis/cofmon"
   },
   "preferGlobal": "true",
-  "bin": {"cofmon": "cofmon.coffee"},
+  "bin": {"cofmon": "index.js"},
   "engines": {
     "node": "~0.6.11"
   },
   "dependencies": {
     "coffee-script": ">=1.2.0"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
   "homepage": "https://github.com/rbrcurtis/cofmon"
 }
