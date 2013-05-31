@@ -14,7 +14,6 @@ query = ->
 			data = data.replace /("[0-9a-f]{24}")/g, "ObjectId($1)"
 			if data.match /^(show|use|it)( |\n)/ then c = data+"\n"
 			else c = coffee.compile data.toString(), {bare:true}
-			console.log c
 			shell.stdin.write c
 		catch e
 			shell.stdin.write data
