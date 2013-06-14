@@ -1,7 +1,7 @@
 A coffeescript shell for mongodb so that you can write coffeescript instead of javascript in the mongo shell.
 
-<<<<<<< HEAD
-To use, just 'npm install -g cofmon coffee-script' and then use the cofmon command as you would the mongo command.
-=======
 To use, just 'npm install -g cofmon' and then use `cofmon` as you would the mongo command.
->>>>>>> 48820f06f33c39a833f4b449643f08be3e1eca21
+
+In additon to being able to write coffeescript instead of javascript, any 24 character hex string that's wrapped in double quotes is automatically made into an ObjectId.  IE, 
+"51bb660191888d7acc355ed8" compiles to ObjectId("51bb660191888d7acc355ed8")
+'51bb660191888d7acc355ed8' compiles to '51bb660191888d7acc355ed8'
