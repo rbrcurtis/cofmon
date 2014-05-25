@@ -31,3 +31,8 @@ shell.stderr.on 'data', (data) ->
 
 shell.on 'exit', ->
 	process.exit(0)
+
+rl.on 'SIGINT', ->
+	process.stdout.write '\nbye'
+	process.stdout.write '\n'
+	process.exit(0)
