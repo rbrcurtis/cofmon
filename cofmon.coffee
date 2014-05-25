@@ -17,17 +17,17 @@ query = ->
 			shell.stdin.write c
 		catch e
 			shell.stdin.write data
-		query()
+		tid = setTimeout query, 100
 
 shell.stdout.on 'data', (data) ->
 	process.stdout.write data.toString()
 	if tid then clearTimeout tid
-	tid = setTimeout query, 200
+	setTimeout query
 
 shell.stderr.on 'data', (data) ->
 	process.stderr.write data.toString()
 	if tid then clearTimeout tid
-	tid = setTimeout query, 200
+	setTimeout query
 
 shell.on 'exit', ->
 	process.exit(0)
