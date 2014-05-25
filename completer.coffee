@@ -45,11 +45,7 @@ find = (text, query) ->
   (text.indexOf query) is 0
 
 exports.completer = (data) ->
-  if data is ''
-    combined = variables.concat firstLevels
-    return [combined, '']
-
-  if data.match /^\w+$/
+  if data.match /^\w*$/
     combined = variables.concat firstLevels
     hits = combined.filter (candidate) ->
       find candidate, data
@@ -88,8 +84,8 @@ exports.completer = (data) ->
 
   if (matchGlobal = data.match /[\s,\(\)=](\w*)$/)?
     match = matchGlobal[1]
-    console.log 'macthing...', match
-    hits = jsGlobals.filter (candidate) ->
+    combined = variables.concat jsGlobals
+    hits = combined.filter (candidate) ->
       find candidate, match
     return [hits, match]
 
