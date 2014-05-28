@@ -10,7 +10,7 @@
   "preferGlobal": "true",
   "bin": {"cofmon": "index.js"},
   "engines": {
-    "node": "~0.6.11"
+    "node": "*"
   },
   "dependencies": {
     "coffee-script": ">=1.2.0"
