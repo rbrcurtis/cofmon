@@ -18,7 +18,7 @@ query = ->
 		scanVariable data
 		try
 			data = data.replace /('[0-9a-f]{24}')/g, "ObjectId($1)"
-			if data.match /^(show|use|it|help)( |\n)/
+			if data.match /^(show|use|it|help)(\s+\S+)?/
 				c = data+"\n"
 			else
 				if data.match /^db\.\w+\.\w+$/
